@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    border: none;
+    text-decoration: none;
+}
+
+section{
+    max-width: 100%;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    padding: 3rem 9%;
+    background-color: rgb(5, 25, 104);
+    opacity: .9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    left: 0;
+    top: 0; 
+    z-index: 100; 
+}
+.logo{
+    font-size: 2rem;
+    font-weight: 800;
+    transition: 0.2s;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+}
+.logo:hover{
+    color: orangered;
+    text-shadow: 0 0 5px orangered;
+    /* transform: scale(1.1); */
+}
+
+.nav {
+    display: block;
+}
+.nav a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: 4rem;
+    margin: 0 20px;
+    transition: 0.2s;
+    color: white;
+}
+.nav a:hover{
+    color: orangered;
+}
+
+span{
+    color: rgb(1, 34, 182);
+}
+
+
+                            /* About section starts from here  */
+.home{ 
+    display: flex;
+    justify-content: center;
+    gap: 7em;
+    align-items: center;
+    padding: 12% 8%;
+    width: 200rem;
+    height: 100vh;
+}
+
+.home_content{
+    max-width: 800px;
+}
+.home_content h2{
+    font-size: 3.5rem;
+}
+.home_content h3{
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+.home_content p{
+    font-size: 20px;
+    margin: 25px 0px 30px;
+    font-weight: 500;
+}
+
+.btn_box{
+    width: 345px;
+    height: 80px;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+.btn1{
+    width: 8rem;
+    height: 3.2rem;
+    border: 2px solid rgb(0, 10, 146);
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 98, 196);
+    transition: 0.5s;
+    font-size: 1.2rem;
+}
+.btn2{
+    width: 8rem;
+    height: 3.2rem;
+    border: 2px solid rgb(0, 10, 146);
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 98, 196);
+    transition: 0.3s;
+    font-size: 1.2rem;
+}
+.btn1:hover{
+    background-color: rgb(40, 62, 255);
+    color: white;
+    box-shadow: 4px 4px 8px rgb(0, 255, 242) ;
+    transform: scale(1.1);
+}
+.btn2:hover{
+    background-color: rgb(40, 62, 255);
+    color: white;
+    box-shadow: 4px 4px 8px rgb(0, 255, 242) ;
+    transform: scale(1.1);
+}
+
+.link-btn{
+    display: inline-block;
+    width: 18rem;
+    height: 3rem;
+    border: 2px solid rgb(0, 10, 146);
+    background-color: rgb(0, 105, 211);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    transition: 0.3s;
+}
+.link-btn:hover{
+    transform: scale(1.1);
+    box-shadow: 4px 4px 8px rgb(0, 255, 242) ;
+}
+
+.img_box img{ 
+    width: 23rem;
+    border-radius: 2rem;
+    box-shadow: 1rem 1rem 1rem rgb(187, 235, 244);
+    transition: .3s;
+}
+.img_box img:hover{
+    transform: scale(1.1);
+    box-shadow: 1rem 1rem 2rem rgb(255, 197, 147);
+}
+
+
+
+
+                                /* About section starts from here  */
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12% 8%;
+    background-color: rgb(220, 227, 248);
+    width: 200rem;
+    height: 52rem;
+}
+.about_content{
+    margin-left: 15%;
+    max-width: 700px;
+}
+.about_img img{
+    position: relative;
+    height: 28rem;
+    /* width: 20rem; */
+    box-shadow: 1rem 1rem 1rem rgb(169, 237, 249);
+    border-radius: 1rem ;
+    transition: .3s;
+}
+.about_img img:hover{
+    box-shadow: 1rem 1rem 1rem rgb(110, 105, 206);
+}
+
+.about_content h2{
+    text-align: center;
+    font-size: 3.5rem;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+.about_content h3{
+    text-align: left;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.about_content p{
+    text-align: justify;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+
+
+                                /* This is the skills and Internship section  */
+.skills{
+    height: 40rem;
+    background-color: rgb(120, 169, 225);
+    width: 100%;
+    padding-bottom: 50rem;
+}
+.skill-heading{
+    font-size: 5.5rem;
+    text-align: center;
+    padding-top: 5rem;
+    color: rgb(0, 12, 118);
+    font-weight: bolder;
+}
+
+.outerbox{
+    margin: 7% auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.box{
+    width: 28rem;
+    height: 20rem;
+    border: 2px solid black;
+    display: inline-block;
+    /* justify-content: space-around; */
+    /* justify-content: center; */
+    background-color: rgb(5, 25, 104);
+    border-radius: 1.5rem;
+}
+.icon{
+    font-size: 4rem;
+    text-align: center;
+    padding: 0.7rem;
+    color: whitesmoke;
+}
+.box h4{
+    font-size: 3.5rem;
+    text-align: center;
+    color: rgb(230, 248, 252);
+}
+.box p{
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    text-align: justify;
+    color: rgb(223, 250, 249);
+}
+
+
+                                    /* This is Contact Us Section  */
+.contactUs{
+    height: 60rem;
+    background-color: rgb(220, 227, 248);
+    width: 100%;
+    padding: 2% 18%;
+    padding-bottom: 5rem;
+    justify-content: center;
+    gap: 7em;
+    align-items: center;
+}
+.contactHeading{
+    padding: 2rem;
+    padding-bottom: 8rem;
+    font-size: 5rem;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.input{
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 5rem;
+    /* max-width: 60rem; */
+    justify-content: space-around;
+}
+.input input{
+    width: 30rem;
+    height: 3.5rem;
+    font-size: 1.2rem;
+    border: px solid rgb(26, 153, 251);
+    background-color: rgb(38, 86, 241);
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.textarea{
+    margin-top: 3rem;
+    background-color: rgb(38, 86, 241);
+    height: 20rem;
+    width: 100%;
+    color: rgb(112, 241, 255);
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 2rem;
+    border-radius: 2rem;
+}
+::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+.contactBtn{
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+                                /* Footer starts form here  */
+footer {
+    background-color: rgb(5, 25, 104);
+    color: #fff;
+    padding: 30px 0;
+}
+
+footer h3 {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    color: #ccc;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+footer hr {
+    border-top: 1px solid #666;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    margin: 0 -15px;
+}
+
+.col1 {
+    width: 50%;
+    float: left;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
