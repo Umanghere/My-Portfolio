@@ -3,70 +3,118 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    border: none;
-    text-decoration: none;
 }
 
-section{
-    max-width: 100%;
-}
-
-.header{
-    position: fixed;
-    width: 100%;
-    max-width: 100%;
-    padding: 3rem 9%;
-    background-color: rgb(5, 25, 104);
-    opacity: .9;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 2rem;
-    left: 0;
-    top: 0; 
-    z-index: 100; 
-}
-.logo{
-    font-size: 2rem;
-    font-weight: 800;
-    transition: 0.2s;
-    color: rgb(255, 255, 255);
-    letter-spacing: 2px;
-}
-.logo:hover{
-    color: orangered;
-    text-shadow: 0 0 5px orangered;
-    /* transform: scale(1.1); */
-}
-
-.nav {
-    display: block;
-}
-.nav a{
-    text-decoration: none;
-    font-size: 1.5rem;
-    margin-left: 4rem;
-    margin: 0 20px;
-    transition: 0.2s;
-    color: white;
-}
-.nav a:hover{
-    color: orangered;
+body{
+    height: 100vh;
+    /* background-color: #666; */
 }
 
 span{
     color: rgb(1, 34, 182);
+} 
+
+#check{
+    display: none;
 }
 
+li{
+    list-style: none;
+}
 
-                            /* About section starts from here  */
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+    background-color: rgba(50, 86, 244, 0.761);
+}
+
+.navbar{
+    width: 100%;
+    height: 100px;
+    max-width: 1950px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar .logo a{
+    font-size: 2.5rem;
+    transition: 0.2s
+}
+.navbar .logo a:hover{
+    color: rgb(255, 255, 255);
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .links a{
+    color: black;
+    transition: .2s;
+}
+.navbar .links a:hover{
+    color: white;
+}
+
+.navbar .togglebtn{
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* DROPDOWN MENU  */
+
+.dropdown_menu{
+    position: absolute;
+    background-color: rgb(201, 185, 8);
+    top: -220px;
+    right: 30%;
+    right: 10px;
+    width: 15rem;
+    background: rgba(120, 120, 120, 0.2);
+    border-radius: 15px;
+    /* backdrop-filter: blur(15px); */
+    overflow: hidden;
+    display: none;
+    transition: 0.15s;
+}
+.dropdown_menu a{
+    color: rgb(0, 0, 0);
+    transition: .2s;
+}
+.dropdown_menu a:hover{
+    color: rgb(0, 51, 255);
+}
+
+.dropdown_menu li{
+    padding: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#check:checked ~ .dropdown_menu{
+    top: 110px;
+    right: 10px;
+    /* display: block; */
+}
+
+                            /* HOME section starts from here  */
 .home{ 
     display: flex;
     justify-content: center;
     gap: 7em;
     align-items: center;
     padding: 12% 8%;
-    width: 200rem;
+    /* width: 200rem; */
     height: 100vh;
 }
 
@@ -77,7 +125,7 @@ span{
     font-size: 3.5rem;
 }
 .home_content h3{
-    font-size: 40px;
+    font-size: 2.2rem;
     line-height: 1.1;
     letter-spacing: 1px;
 }
@@ -102,7 +150,7 @@ span{
     border-radius: 1rem;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 98, 196);
-    transition: 0.5s;
+    transition: 0.3s;
     font-size: 1.2rem;
 }
 .btn2{
@@ -163,25 +211,24 @@ span{
 
                                 /* About section starts from here  */
 .about{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12% 8%;
+    padding: 8% 9%;
     background-color: rgb(220, 227, 248);
-    width: 200rem;
+    width: 100%;
     height: 52rem;
 }
-.about_content{
-    margin-left: 15%;
-    max-width: 700px;
-}
+
 .about_img img{
-    position: relative;
+    /* position: relative; */
     height: 28rem;
     /* width: 20rem; */
     box-shadow: 1rem 1rem 1rem rgb(169, 237, 249);
     border-radius: 1rem ;
     transition: .3s;
+    margin-right: 15rem;
 }
 .about_img img:hover{
     box-shadow: 1rem 1rem 1rem rgb(110, 105, 206);
@@ -217,7 +264,7 @@ span{
 .skill-heading{
     font-size: 5.5rem;
     text-align: center;
-    padding-top: 5rem;
+    padding-top: 3rem;
     color: rgb(0, 12, 118);
     font-weight: bolder;
 }
@@ -235,9 +282,6 @@ span{
     width: 28rem;
     height: 20rem;
     border: 2px solid black;
-    display: inline-block;
-    /* justify-content: space-around; */
-    /* justify-content: center; */
     background-color: rgb(5, 25, 104);
     border-radius: 1.5rem;
 }
@@ -266,14 +310,12 @@ span{
     background-color: rgb(220, 227, 248);
     width: 100%;
     padding: 2% 18%;
-    padding-bottom: 5rem;
     justify-content: center;
-    gap: 7em;
     align-items: center;
 }
 .contactHeading{
-    padding: 2rem;
-    padding-bottom: 8rem;
+    padding: 1rem;
+    padding-bottom: 4rem;
     font-size: 5rem;
     text-align: center;
     color: rgb(0, 0, 0);
@@ -301,12 +343,12 @@ span{
 
 .textarea{
     margin-top: 3rem;
+    color: rgb(255, 255, 255);
     background-color: rgb(38, 86, 241);
     height: 20rem;
     width: 100%;
-    color: rgb(112, 241, 255);
     font-size: 1.5rem;
-    text-align: center;
+    text-align: justify;
     padding-top: 2rem;
     border-radius: 2rem;
 }
@@ -324,7 +366,7 @@ span{
 
                                 /* Footer starts form here  */
 footer {
-    background-color: rgb(5, 25, 104);
+    background-color: rgb(13, 21, 56);
     color: #fff;
     padding: 30px 0;
 }
@@ -362,3 +404,242 @@ footer hr {
     box-sizing: border-box;
 }
 
+
+                                    /* Media Query for MOBILE Screens */
+                                    /* Media Query for MOBILE Screens */
+                                    /* Media Query for MOBILE Screens */
+
+
+@media only screen and (max-width: 768px){
+
+                    /* HEADER STARTS HERE  */
+    .navbar .links{
+        display: none;
+    }
+
+    .navbar .togglebtn{
+        display: block ;
+    }
+    .navbar .logo a{
+        font-size: 2rem;
+    }
+    .navbar .logo a:hover{
+        color: rgb(255, 255, 255);
+    }
+    
+    .dropdown_menu{
+        display: block;
+    }
+                    /* HEADER ENDS HERE  */
+
+
+
+                    /* Home Section starts here  */
+    .home{
+        display: block;
+    }
+
+    .home_content h2{
+        margin-top: 8rem;
+        font-size: 2.5rem;
+        text-align: center;
+        word-spacing: 0.5rem;
+    }
+    
+    .home_content h3{
+        color: rgb(1, 34, 182);
+        font-size: 1.8rem;
+        text-align: center;
+        margin-top: 0.5rem;
+        transition: .2s;
+    }
+    
+    .home_content p{
+        margin: 1.5rem auto;
+        width: 80%;
+        font-size: 1.2rem;
+    }
+    
+    .btn_box{
+        width: 100%;
+        justify-content: center;
+        height: 3.2rem;
+    }
+    .btn1{
+        width: 6rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+    .btn2{
+        width: 6rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+
+    .link_box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4.2rem;
+    }
+    .link-btn{
+        width: 15rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+
+    .img_box{
+        display: flex;
+        justify-content: center;
+    }
+
+    .img_box img{ 
+        margin-top: 2rem;
+        width: 15rem;
+        border-radius: 50%;
+    }
+                        /* HOME SECTION ends here */
+
+    
+                        /* About Me Section Starts here  */
+    
+    .about{
+        display: block;
+        margin-top: 37%;
+        height: 48rem;
+    }
+
+    .about_img img{
+        display: block;
+        width: 15rem;
+        height: 19rem;
+        border-radius: 40%;
+        margin: 0.1px auto;
+        /* margin-left: auto; */
+
+    }
+
+    .about_content h2{
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+
+    .about_content h3{
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .about_content p{
+        font-size: 1rem;
+    }
+                            /* About Me Section ENDS here  */
+
+
+                            /* SKILLS SECTION */
+    .skills{
+        height: 54rem;
+    }
+    .skill-heading{
+        font-size: 3rem;
+    }
+
+    .box{
+        width: 15rem;
+        height: 18rem;
+        border: 2px solid black;
+        background-color: rgb(5, 25, 104);
+        border-radius: 1.5rem;
+    }
+    .icon{
+        font-size: 2rem;
+    }
+    .box h4{
+        font-size: 2.3rem;
+    }
+    .box p{
+        font-size: .9rem;
+    }
+                            /* SKILLS SECION ENDS HERE  */
+
+
+                            /* CONTACT FORM  */
+    .contactUs{
+    height: 50rem;
+    background-color: rgb(220, 227, 248);
+    }
+
+    .contactHeading{
+        width: 100%;
+        height: 20%;
+        font-size: 3rem;   
+        padding-top: 2rem; 
+    }
+
+    .input{
+        display: flex;
+        width: 100%;
+        height: 6rem;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-bottom: 8rem;
+        /* max-width: 60rem; */
+        justify-content: space-around;
+    }
+    .input input{
+        width: 20rem;
+        height: 3.5rem;
+        font-size: 1.2rem;
+        border: px solid rgb(26, 153, 251);
+        background-color: rgb(38, 86, 241);
+        border-radius: 1rem;
+        text-align: center;
+    }
+
+    .textarea{
+        margin-top: 3rem;
+        background-color: rgb(38, 86, 241);
+        height: 10rem;
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+        padding-top: 2rem;
+        border-radius: 2rem;
+    }
+    ::placeholder {
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+                            /* CONTACT FORM ENDS HERE  */
+
+
+                            /* FOOTER STARTS HERE  */
+    footer {
+        padding: 1.2rem 0;
+    }
+                            
+    footer h3 {
+        color: #fff;
+        font-size: 1.5rem;
+    }
+                            
+    footer p {
+        color: #ccc;
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .col1 {
+        width: 50%;
+        float: left;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .row {
+        margin: 0 -1rem;
+        font-size: 1rem;
+    }
+                                /* FOOTER STARTS HERE  */
+
+}

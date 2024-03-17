@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="gpt.css"> -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="https://img.icons8.com/doodle/48/000000/jake.png">
@@ -11,15 +12,31 @@
 <body>
 
     <!-- This is the header part which contains all the necessary links -->
-    <header class="header">
-        <a href="#" class="logo">Portfolio</a>
-        <nav class="nav">
-            <a href="#">Home</a>
-            <a href="#">Work</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Feedback</a>
-        </nav>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="home">My PortFolio</a></div>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+            <div class="togglebtn">
+                <label for="check">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+            </div>
+        </div>
+        
+        <input type="checkbox" id="check">
+        <div class="dropdown_menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Feedback</a></li>
+        </div>
     </header>
     <!-- Header End -->
 
@@ -27,7 +44,9 @@
     <!-- This is Main Section  -->
     <section class="home">
         <div class="home_content">
-            <h2>Hey, <span>Myself</span></h2>
+            <div style="display: inline;">
+                <h2>Hey, Myself</h2>
+            </div>
             <h3>Umang Bansal</h3>
             <p>Computer Science Bachelor Student | Proficient in C/C++, Java | Front-end Development | Fast Learner & Problem Solver | Seeking to secure my future as a Cloud Engineer | Date Structure and Algorithm | Love to talk about Cars and Dogs
             </p>
@@ -35,7 +54,9 @@
                 <button class="btn1">Hire Me</button>
                 <button class="btn2">Let's Chat</button>
             </div>
-            <a href="#" download="file:///D:/Umang's%20Docs/Umang%20Resume.pdf" class="link-btn"> Download CV</a>
+            <div class="link_box">
+                <a href="#" download="file:///D:/Umang's%20Docs/Umang%20Resume.pdf" class="link-btn"> Download CV</a>
+            </div>
         </div>
         <div class="img_box">
             <img src="./image/one.jpg" alt="My Photo" class="main-img">
@@ -51,7 +72,7 @@
         </div>
         <div class="about_content">
             <h2>About <span>Me</span></h2>
-            <h3>Bachelor Of <span>Technology</span> (Major <span>CSE</span>)</h3>
+            <h3>Bachelor Of <span>Technology</span> <br>(Major <span>CSE</span>)</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ex sit esse hic, quae reiciendis laborum nam consequuntur dicta ipsam aliquid vitae doloribus numquam veritatis perspiciatis animi commodi eos nisi.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, aliquam vero nobis ad ipsam esse beatae temporibus iure corrupti doloremque dolore natus suscipit repudiandae magnam, fuga est. Minus, quisquam commodi.</p>
         </div>
     </section>
@@ -87,12 +108,12 @@
         <h2 class="contactHeading">Contact <span style="color: rgb(0, 0, 249);">Us</span></h2>
         <form action="#">
             <div class="input">
-                <input type="text" name="fname" id="fname" placeholder="Your First Name:">
+                <input type="text" name="fname" id="fname" placeholder="Your First Name:"><br>
                 <input type="text" name="lname" id="lname" placeholder="Your Last Name:">
             </div>
             <br>
             <div class="input">
-                <input type="number" name="number" id="number" placeholder="Enter your Phone Number:">
+                <input type="number" name="number" id="number" placeholder="Enter your Phone Number:"><br>
                 <input type="email" name="email" id="email" placeholder="Enter your E-mail Address: ">
             </div>
             <textarea class="textarea" name="" id="" cols="100" rows="10" placeholder="Write your Feedback Here"></textarea>
@@ -123,11 +144,13 @@
                 </div>
             </div>
 
+            <br><br><br><br><br><br>
             <hr>
+            <br>
 
-            <div class="row">
-                <div>
-                    <p style="font-size: 1.5rem; color: rgb(255, 255, 255);">&copy; 2024 My Portfolio. All rights reserved.</p>
+            <div class="row2">
+                <div class="signature">
+                    <p style="font-size: 1.1rem; color: rgb(255, 255, 255);">&copy; 2024 My Portfolio. All rights reserved.</p>
                 </div>
             </div>
         </div>
